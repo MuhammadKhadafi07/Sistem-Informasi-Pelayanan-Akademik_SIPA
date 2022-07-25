@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Show hide field form on click select | www.hakkoblogs.com</title>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="testing.php" method="POST" style="margin-top: 50px;">
+<table class="table table-bordered">
+    <tr>
+    <td><label>Bawa Kendaraan Sendiri</label></td>
+    <td>
+    <select name="kendaraan" id="kendaraan" class="form-control" required="required">
+        <option value="">-- Punya Kendaraan.? --</option>
+        <option value="YA">YA</option>
+        <option value="TIDAK">TIDAK</option>
+    </select>
+    </td>
+    </tr>
+
+    <tr id="mobil" style="display: none;">
+    <td><label>Seat Kendaraan <i style="color: red; font-size: 12px;">(* Harap di isi bila membawa kendaraan)</i></label>
+    <td><select name="jenis" id="jenis" class="form-control" >
+        <option value="">-- Pilih Jumlah Seat --</option>
+        <option value="4 Seat"> 4 Seat</option>
+        <option value="5 Seat"> 5 Seat</option>
+        <option value="6 Seat"> 6 Seat</option>
+        <option value="7 Seat"> 7 Seat</option>
+        <option value="8 Seat"> 8 Seat</option>
+        </select>
+    </td>
+    </tr>
+
+    <tr id="mobil1" style="display: none;">
+    <td><label>Plat Nomor <i style="color: red; font-size: 12px;">(* Harap di isi bila membawa kendaraan)</i></label></td>
+    <td><input type="text" name="nopol" id="nopol" class="form-control" /></td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <td><input type="submit" name="kirim" id="kirim" class="btn btn-sm btn-primary" /> <a href="testing.php" class="btn btn-sm btn-warning"> Refresh</a></td>
+    </tr>
+</form>
+</table>
+<script type="text/javascript">
+    $(function () {
+        $("#kendaraan").change(function () {
+            if ($(this).val() == "YA") {
+                $("#mobil").show();
+                $("#mobil1").show();
+            } else {
+                $("#mobil").hide();
+                $("#mobil1").hide();
+            }
+        });
+    });
+</script>
+</body>
+</html>

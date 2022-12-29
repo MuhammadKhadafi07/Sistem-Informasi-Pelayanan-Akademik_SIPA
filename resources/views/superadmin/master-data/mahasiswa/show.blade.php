@@ -35,7 +35,8 @@
                                 <dd class="col-10">: {{ $mahasiswa->tempat_lahir }}</dd>
                                 <dt class="col-2">Tanggal Lahir</dt>
                                 <dd class="col-10">: {{ $mahasiswa->tanggal_lahir_string }}</dd>
-                                <dt class="col-2">Angkatan</dt>
+                                <dt class="col-2">Tahun Masuk</dt>
+                                {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                                 <dd class="col-10">: {{ $mahasiswa->angkatan }}</dd>
                                 <dt class="col-2">No. Handphone</dt>
                                 <dd class="col-10">: {{ $mahasiswa->no_telepon }}</dd>

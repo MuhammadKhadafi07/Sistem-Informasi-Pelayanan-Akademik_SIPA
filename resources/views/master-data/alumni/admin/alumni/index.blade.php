@@ -12,7 +12,8 @@
                     <th>Nama</th>
                     <th>Jenis Kelamin</th>
                     <th>Program Studi - Tahun Lulus Kuliah</th>
-                    <th>Angkatan</th>
+                    <th>Tahun Masuk</th>
+                    {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                 </thead>
                 <tbody>
                     @foreach ($list_alumni->sortByDesc('created_at')->values() as $alumnus)

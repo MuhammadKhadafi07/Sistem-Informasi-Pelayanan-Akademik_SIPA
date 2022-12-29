@@ -98,7 +98,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="" class="control-label">Angkatan</label>
+                                    <label for="" class="control-label">Tahun Masuk</label>
+                                    {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                                     <p class="form-control">{{ $pengguna->angkatan }}</p>
                                 </div>
                             </div>

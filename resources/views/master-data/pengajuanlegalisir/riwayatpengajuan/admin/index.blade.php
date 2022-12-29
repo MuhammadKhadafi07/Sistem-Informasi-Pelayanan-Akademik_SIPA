@@ -12,7 +12,7 @@
                     <th width="40px">NIM</th>
                     <th>Nama</th>
                     <th>Program Studi</th>
-                    <th width="20px">Angkatan</th>
+                    <th width="20px">Tahun Masuk</th>
                     <th>Jadwal Pengambilan</th>
                 </thead>
                 <tbody>

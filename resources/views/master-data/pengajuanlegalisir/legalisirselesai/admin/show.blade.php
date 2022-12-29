@@ -28,7 +28,8 @@
                         <dd class="col-md-10">: {{ $pengajuanlegalisir->mahasiswa->nim }}</dd>
                         <dt class="col-md-2">Program Studi</dt>
                         <dd class="col-md-10">: {{ $pengajuanlegalisir->mahasiswa->program_studi }}</dd>
-                        <dt class="col-md-2">Angkatan</dt>
+                        <dt class="col-md-2">Tahun Masuk</dt>
+                        {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                         <dd class="col-md-10">: {{ $pengajuanlegalisir->mahasiswa->angkatan }}</dd>
                         <dt class="col-md-2">Jenis Kelamin</dt>
                         <dd class="col-md-10">: {{ $pengajuanlegalisir->mahasiswa->jenis_kelamin }}</dd>

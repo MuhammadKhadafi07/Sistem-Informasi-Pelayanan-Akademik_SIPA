@@ -24,7 +24,7 @@
                         <dd class="col-md-9">: {{ $pengajuanpengambilanijazah->mahasiswa->program_studi }}</dd>
                         <dt class="col-md-3">Jenis Kelamin</dt>
                         <dd class="col-md-9">: {{ $pengajuanpengambilanijazah->mahasiswa->jenis_kelamin }}</dd>
-                        <dt class="col-md-3">Angkatan</dt>
+                        <dt class="col-md-3">Tahun Masuk</dt>
                         <dd class="col-md-9">: {{ $pengajuanpengambilanijazah->mahasiswa->angkatan }}</dd>
                         <dt class="col-md-3">No. Handphone</dt>
                         <dd class="col-md-9">: {{ $pengajuanpengambilanijazah->no_hp }}</dd>

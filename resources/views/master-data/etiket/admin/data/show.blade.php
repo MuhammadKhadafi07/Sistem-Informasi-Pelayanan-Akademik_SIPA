@@ -19,7 +19,8 @@
                     <dd class="col-10">: {{ $etiket->mahasiswa->nim }}</dd>
                     <dt class="col-2">Program Studi</dt>
                     <dd class="col-10">: {{ $etiket->mahasiswa->program_studi }}</dd>
-                    <dt class="col-2">Angkatan</dt>
+                    <dt class="col-2">Tahun Masuk</dt>
+                    {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                     <dd class="col-10">: {{ $etiket->mahasiswa->angkatan }}</dd>
                     <dt class="col-2">Jenis Kelamin</dt>
                     <dd class="col-10">: {{ $etiket->mahasiswa->jenis_kelamin }}</dd>

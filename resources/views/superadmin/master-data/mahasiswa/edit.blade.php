@@ -107,7 +107,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="" class="control-label">Angkatan</label>
+                                    <label for="" class="control-label">Tahun Masuk</label>
+                                    {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                                     <select name="angkatan" class="form-control" required>
                                         <option selected>{{ $mahasiswa->angkatan }}</option>
                                         <option value="2008">2008</option>

@@ -22,7 +22,8 @@
                             <dd class="col-9">: {{ $alumnus->mahasiswa->nim }}</dd>
                             <dt class="col-3">Program Studi</dt>
                             <dd class="col-9">: {{ $alumnus->mahasiswa->program_studi }}</dd>
-                            <dt class="col-3">Angkatan</dt>
+                            <dt class="col-3">Tahun Masuk</dt>
+                            {{-- Permintaan dari client, judul angkatan diubah ke tahun masuk --}}
                             <dd class="col-9">: {{ $alumnus->mahasiswa->angkatan }}</dd>
                             <dt class="col-3">Agama</dt>
                             <dd class="col-9">: {{ $alumnus->mahasiswa->agama }}</dd>

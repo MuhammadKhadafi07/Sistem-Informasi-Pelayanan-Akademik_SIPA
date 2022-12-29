@@ -24,7 +24,7 @@
                         <dd>{{ $pengajuansuratketeranganaktif->mahasiswa->nim }}</dd>
                         <dt>Program Studi</dt>
                         <dd>{{ $pengajuansuratketeranganaktif->mahasiswa->program_studi }}</dd>
-                        <dt>Angkatan</dt>
+                        <dt>Tahun Masuk</dt>
                         <dd>{{ $pengajuansuratketeranganaktif->mahasiswa->angkatan }}</dd>
                         <dt>Jenis Kelamin</dt>
                         <dd>{{ $pengajuansuratketeranganaktif->mahasiswa->jenis_kelamin }}</dd>

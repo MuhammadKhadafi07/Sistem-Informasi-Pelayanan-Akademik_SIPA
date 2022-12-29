@@ -31,7 +31,7 @@
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Program Studi</th>
-                    <th>Angkatan</th>
+                    <th>Tahun Masuk</th>
                 </thead>
                 <tbody>
                     @php

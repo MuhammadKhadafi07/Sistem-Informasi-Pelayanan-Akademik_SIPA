@@ -78,7 +78,7 @@
                     </div>
 
                     <div class="login100-form-social flex-c-m">
-                        <a href="{{ url('/register') }}" class="btn btn-dark">Register</a>
+                        <a href="{{ url('/register') }}" class="btn btn-dark">Register Akun</a>
                     </div>
                 </form>
 

@@ -61,7 +61,7 @@
                                         <label for=""
                                             class="label text-danger">{{ $errors->get('nim')[0] }}</label>
                                     @endif
-                                    <input class="input--style-5" type="number" name="nim">
+                                    <input class="input--style-5" type="number" name="nim" placeholder="NIM digunakan untuk User ID login">
                                 </div>
                             </div>
                         </div>
@@ -189,7 +189,8 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Angkatan</div>
+                            <div class="name">Tahun Masuk</div>
+                            {{-- Permintaan client, dari angkatan dirubah ke tahun masuk --}}
                             <div class="value">
                                 <div class="input-group">
                                     @if ($errors->has('angkatan'))

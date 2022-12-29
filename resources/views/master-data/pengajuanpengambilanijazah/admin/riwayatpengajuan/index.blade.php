@@ -11,7 +11,7 @@
                     <th>Tanggal Pengajuan</th>
                     <th>Nama</th>
                     <th>Program Studi</th>
-                    <th>Angkatan</th>
+                    <th>Tahun Masuk</th>
                     <th width="50px">Perpustakaan</th>
                     <th width="50px">Jurusan</th>
                     <th width="50px">Alumni</th>

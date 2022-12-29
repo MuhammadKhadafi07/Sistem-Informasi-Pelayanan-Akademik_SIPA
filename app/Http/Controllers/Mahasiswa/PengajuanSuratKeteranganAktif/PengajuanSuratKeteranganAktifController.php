@@ -42,7 +42,7 @@ class PengajuanSuratKeteranganAktifController extends Controller
         $pengajuansuratketeranganaktif->no_telepon = request('no_telepon');
         $pengajuansuratketeranganaktif->save();
 
-        return redirect('mahasiswa/pengajuansuratketeranganaktif')->with('success', 'Pengajuan berhasil terkirim');
+        return redirect('mahasiswa/pengajuansuratketeranganaktif')->with('success', 'Pengajuan baru berhasil terkirim, silahkan konfirmasi ke kontak berikut: Bu Henny 089668804846');
     }
 
     public function destroy(PengajuanSuratKeteranganAktif $pengajuansuratketeranganaktif)

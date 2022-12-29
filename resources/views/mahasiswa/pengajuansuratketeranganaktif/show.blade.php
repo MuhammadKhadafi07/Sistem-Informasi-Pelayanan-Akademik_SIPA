@@ -12,6 +12,11 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
+                    <div style="text-align: center">
+                        <h4><b>CATATAN</b></h4>
+                        <p>Silahkan konfirmasi ke kontak berikut: Bu Henny 089668804846</p>
+                    </div>
+                    <hr>
                     <dl>
                         <dt>Tanggal Pengajuan</dt>
                         <dd>{{ $pengajuansuratketeranganaktif->tanggal_pengajuan_string }}</dd>

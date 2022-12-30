@@ -49,6 +49,29 @@ class PengajuanSuratKeteranganAktifController extends Controller
     {
         $pengajuansuratketeranganaktif->delete();
 
-        return redirect('mahasiswa/pengajuansuratketeranganaktif')->with('success', 'Data berhasil dihapus');
+        return redirect('mahasiswa/pengajuansuratketeranganaktif')->with('danger', 'Pengajuan berhasil dihapus');
+    }
+
+    public function edit(PengajuanSuratKeteranganAktif $pengajuansuratketeranganaktif)
+    {
+        $data['pengajuansuratketeranganaktif'] = $pengajuansuratketeranganaktif;
+
+        return view('mahasiswa.pengajuansuratketeranganaktif.edit', $data);
+    }
+
+    public function update(PengajuanSuratKeteranganAktif $pengajuansuratketeranganaktif)
+    {
+        $pengajuansuratketeranganaktif->id_mahasiswa = request()->user()->id;
+        $pengajuansuratketeranganaktif->semester = request('semester');
+        $pengajuansuratketeranganaktif->alamat_rumahsekarang = request('alamat_rumahsekarang');
+        $pengajuansuratketeranganaktif->nama_orangtua = request('nama_orangtua');
+        $pengajuansuratketeranganaktif->tempat_kerja_orangtua = request('tempat_kerja_orangtua');
+        $pengajuansuratketeranganaktif->alamat_tinggal_orangtua = request('alamat_tinggal_orangtua');
+        $pengajuansuratketeranganaktif->keperluan = request('keperluan');
+        $pengajuansuratketeranganaktif->status = 1;
+        $pengajuansuratketeranganaktif->no_telepon = request('no_telepon');
+        $pengajuansuratketeranganaktif->save();
+
+        return redirect('mahasiswa/pengajuansuratketeranganaktif')->with('warning', 'Pengajuan berhasil diedit');
     }
 }

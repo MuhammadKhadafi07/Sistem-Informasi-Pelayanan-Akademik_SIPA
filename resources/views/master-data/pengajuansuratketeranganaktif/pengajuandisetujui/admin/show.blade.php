@@ -2,14 +2,42 @@
     <x-template.button.back-button url="pengajuansuratketeranganaktif/admin/pengajuandisetujui" />
     <div class="card">
         <div class="card-header">
-            @if ($pengajuansuratketeranganaktif->surat_keteranganaktif)
+
+            {{-- Original --}}
+            {{-- @if ($pengajuansuratketeranganaktif->surat_keteranganaktif)
                 <a href="" target="popup"
                     onclick="window.open('{{ url($pengajuansuratketeranganaktif->surat_keteranganaktif) }}','popup','width=800,height=600'); return false;"
                     class="btn btn-secondary float-right btn-sm"><i class="fas fa-download"></i> Lihat Surat</a>
                 <button type="button" class="btn btn-primary float-right btn-sm" data-toggle="modal"
                     data-target=".bd-example-modal-lg"><i class="fas fa-upload"></i> Upload
                     Surat Ulang</button>
+            @else --}}
+
+            {{-- Update --}}
+            @if ($pengajuansuratketeranganaktif->surat_keteranganaktif)
+                {{-- Update 30 Des 2022 ~ Menambahkan button delete --}}
+                <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuandisetujui', $pengajuansuratketeranganaktif->id) }}" method="post"
+                    onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger btn-sm float-right"><i class="fas fa-trash"></i></button>
+                </form>
+                {{-- End Update Button Delete --}}
+                <a href="" target="popup"
+                    onclick="window.open('{{ url("public/$pengajuansuratketeranganaktif->surat_keteranganaktif") }}','popup','width=800,height=600'); return false;"
+                    class="btn btn-secondary float-right btn-sm"><i class="fas fa-download"></i> Lihat Surat</a>
+                <button type="button" class="btn btn-primary float-right btn-sm" data-toggle="modal"
+                    data-target=".bd-example-modal-lg"><i class="fas fa-upload"></i> Upload
+                    Surat Ulang</button>
             @else
+                {{-- Update 30 Des 2022 ~ Menambahkan button delete --}}
+                <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuandisetujui', $pengajuansuratketeranganaktif->id) }}" method="post"
+                    onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger btn-sm float-right"><i class="fas fa-trash"></i></button>
+                </form>
+                {{-- End Update Button Delete --}}
                 <form
                     action="{{ url('pengajuansuratketeranganaktif/admin/pengajuandisetujui/diproses', $pengajuansuratketeranganaktif->id) }}"
                     method="post"

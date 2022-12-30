@@ -2,8 +2,16 @@
     <x-template.button.back-button url="pengajuansuratketeranganaktif/admin/pengajuanmasuk" />
     <div class="card">
         <div class="card-header">
+            {{-- Revisi Bulan 29 Desember 2022 --}}
+            <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuanmasuk', $pengajuansuratketeranganaktif->id) }}" method="post"
+                onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                @csrf
+                @method('delete')
+                <button class="btn btn-danger btn-sm float-right"><i class="fas fa-trash"></i></button>
+            </form>
+            {{-- End Revisi --}}
             <a href="{{ url('pengajuansuratketeranganaktif/admin/pengajuanmasuk', $pengajuansuratketeranganaktif->id) }}/tolak"
-                class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i> Tolak</a>
+                class="btn btn-warning btn-sm float-right"><i class="fas fa-times"></i> Tolak</a>
             <form
                 action="{{ url('pengajuansuratketeranganaktif/admin/pengajuanmasuk/setuju', $pengajuansuratketeranganaktif->id) }}"
                 method="post" onsubmit="return confirm('Yakin ingin menyetujui pengajuan ini?')">

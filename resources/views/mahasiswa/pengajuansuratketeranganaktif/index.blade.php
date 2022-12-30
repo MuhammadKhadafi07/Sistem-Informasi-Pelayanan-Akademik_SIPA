@@ -24,10 +24,19 @@
                                         class="btn btn-dark btn-sm"><i class="fas fa-info"></i> Detail</a>
                                     @if ($pengajuansuratketeranganaktif->surat_keteranganaktif)
                                         <a href="" target="popup"
-                                            onclick="window.open('{{ url($pengajuansuratketeranganaktif->surat_keteranganaktif) }}','popup','width=800,height=600'); return false;"
+                                            onclick="window.open('{{ url("public/$pengajuansuratketeranganaktif->surat_keteranganaktif") }}','popup','width=800,height=600'); return false;"
                                             class="btn btn-primary btn-sm float-right"><i class="fas fa-download"></i>
                                             Download Surat</a>
                                     @endif
+                                    <a href="{{ url('mahasiswa/pengajuansuratketeranganaktif', $pengajuansuratketeranganaktif->id) }}/edit"
+                                        class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                    {{-- Revisi 29 Desember 2022 --}}
+                                    <form action="{{ url('mahasiswa/pengajuansuratketeranganaktif', $pengajuansuratketeranganaktif->id) }}" method="post"
+                                        onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                    </form>
                                 </div>
                             </td>
                             <td>{{ $pengajuansuratketeranganaktif->tanggal_pengajuan_string }}</td>

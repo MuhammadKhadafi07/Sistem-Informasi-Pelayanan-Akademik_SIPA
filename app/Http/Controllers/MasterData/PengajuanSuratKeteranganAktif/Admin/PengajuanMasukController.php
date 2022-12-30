@@ -22,12 +22,12 @@ class PengajuanMasukController extends Controller
         return view('master-data.pengajuansuratketeranganaktif.pengajuanmasuk.admin.show', $data);
     }
 
-    public function destroy(PengajuanSuratKeteranganAktif $pengajuansuratketeranganaktif)
+    public function destroy(PengajuanSuratKeteranganAktif $pengajuanmasuk)
     {
-        $pengajuansuratketeranganaktif->handleDelete();
-        $pengajuansuratketeranganaktif->delete();
+        $pengajuanmasuk->handleDelete();
+        $pengajuanmasuk->delete();
 
-        return redirect('pengajuansuratketeranganaktif/admin/pengajuanmasuk')->with('success', 'Data berhasil dihapus');
+        return redirect('pengajuansuratketeranganaktif/admin/pengajuanmasuk')->with('danger', 'Pengajuan berhasil dihapus');
     }
 
     public function tolak(PengajuanSuratKeteranganAktif $pesan)

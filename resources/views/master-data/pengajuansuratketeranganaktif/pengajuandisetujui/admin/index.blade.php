@@ -31,7 +31,7 @@
                                                 Surat
                                                 Ulang</a>
                                             <a href="" target="popup"
-                                                onclick="window.open('{{ url($pengajuansuratketeranganaktif->surat_keteranganaktif) }}','popup','width=800,height=600'); return false;"
+                                                onclick="window.open('{{ url("public/$pengajuansuratketeranganaktif->surat_keteranganaktif") }}','popup','width=800,height=600'); return false;"
                                                 class="btn btn-secondary float-right btn-sm"><i
                                                     class="fas fa-download"></i>
                                                 Lihat Surat</a>
@@ -49,6 +49,13 @@
                                                     Batal</button>
                                             </form>
                                         @endif
+                                        {{-- Revisi Bulan 29 Desember 2022 --}}
+                                        <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuandisetujui', $pengajuansuratketeranganaktif->id) }}" method="post"
+                                            onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                        </form>
                                     </div>
                                 </td>
                                 <td>{{ $pengajuansuratketeranganaktif->tanggal_pengajuan_string }}</td>

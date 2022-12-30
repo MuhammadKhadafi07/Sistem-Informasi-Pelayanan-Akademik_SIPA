@@ -17,7 +17,7 @@
                     @if ($etiket->foto_bukti)
                         <dd class="col-10">:
                             <a href="" target="popup"
-                                onclick="window.open('{{ url($etiket->foto_bukti) }}','popup','width=800,height=600'); return false;"
+                                onclick="window.open('{{ url("public/$etiket->foto_bukti") }}','popup','width=800,height=600'); return false;"
                                 class=" btn btn-dark btn-sm">
                                 <i class="fa fa-download"></i>
                                 Lihat Bukti

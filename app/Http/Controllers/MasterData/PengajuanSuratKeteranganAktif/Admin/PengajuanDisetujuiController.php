@@ -32,13 +32,23 @@ class PengajuanDisetujuiController extends Controller
         $pengajuanditolak = PengajuanSuratKeteranganAktif::find($id);
         $pengajuanditolak->status = 1;
         $pengajuanditolak->save();
-        
+
         return redirect('pengajuansuratketeranganaktif/admin/pengajuandisetujui')->with('warning', 'Berhasil dibatalkan');
     }
 
     public function kirimsuratket(PengajuanSuratKeteranganAktif $kirimsurat)
     {
-        $data['pengajuansuratketeranganaktif'] = $kirimsurat; 
+        $data['pengajuansuratketeranganaktif'] = $kirimsurat;
         return view('master-data.pengajuansuratketeranganaktif.pengajuandisetujui.admin.kirimsurat', $data);
+    }
+
+
+    // Update 30 Desember 2022
+    public function destroy(PengajuanSuratKeteranganAktif $pengajuandisetujui)
+    {
+        $pengajuandisetujui->handleDelete();
+        $pengajuandisetujui->delete();
+
+        return redirect('pengajuansuratketeranganaktif/admin/pengajuandisetujui')->with('danger', 'Pengajuan berhasil dihapus');
     }
 }

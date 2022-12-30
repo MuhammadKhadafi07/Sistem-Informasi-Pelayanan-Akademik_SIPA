@@ -35,7 +35,14 @@
                                                 Setuju</button>
                                         </form>
                                         <a href="{{ url('pengajuansuratketeranganaktif/admin/pengajuanmasuk', $pengajuansuratketeranganaktif->id) }}/tolak"
-                                            class="btn btn-danger btn-sm"><i class="fas fa-times"></i> Tolak</a>
+                                            class="btn btn-warning btn-sm"><i class="fas fa-times"></i> Tolak</a>
+                                        {{-- Revisi Bulan 29 Desember 2022 --}}
+                                        <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuanmasuk', $pengajuansuratketeranganaktif->id) }}" method="post"
+                                            onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                        </form>
                                     </div>
                                 </td>
                                 <td>{{ $pengajuansuratketeranganaktif->tanggal_pengajuan_string }}</td>

@@ -35,6 +35,13 @@
                                             <button class="btn btn-warning btn-sm"><i class="fas fa-redo"></i>
                                                 Batal</button>
                                         </form>
+                                        {{-- Revisi Bulan 29 Desember 2022 --}}
+                                        <form action="{{ url('pengajuansuratketeranganaktif/admin/pengajuanditolak', $pengajuansuratketeranganaktif->id) }}" method="post"
+                                            onsubmit="return confirm('Yakin ingin menghapus pengajuan ini?')">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                        </form>
                                     </div>
                                 </td>
                                 <td>{{ $pengajuansuratketeranganaktif->tanggal_pengajuan_string }}</td>

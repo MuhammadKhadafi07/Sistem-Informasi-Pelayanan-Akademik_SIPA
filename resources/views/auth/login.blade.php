@@ -82,7 +82,7 @@
                     </div>
                 </form>
 
-                <div class="login100-more" style="background-image: url('app/images/imagelogin/sipa.jpg');">
+                <div class="login100-more" style="background-image: url('public/app/images/imagelogin/sipa.jpg');">
                 </div>
             </div>
         </div>

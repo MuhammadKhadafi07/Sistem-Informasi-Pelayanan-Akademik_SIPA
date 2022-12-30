@@ -10,7 +10,7 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <img src="{{ url($pengguna->foto) }}" class="img-fluid" alt="">
+                    <img src="{{ url("public/$pengguna->foto") }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>

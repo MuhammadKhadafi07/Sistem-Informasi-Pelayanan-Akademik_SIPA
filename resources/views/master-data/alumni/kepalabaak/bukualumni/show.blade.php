@@ -9,7 +9,7 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($alumni->foto) }}" alt="" class="img-fluid">
+                        <img src="{{ url("public/$alumni->foto") }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

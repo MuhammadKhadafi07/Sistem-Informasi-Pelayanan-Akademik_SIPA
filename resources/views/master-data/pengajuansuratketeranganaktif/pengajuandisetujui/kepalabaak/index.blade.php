@@ -27,7 +27,7 @@
                                             class="btn btn-dark btn-sm"><i class="fas fa-info"></i> Detail</a>
                                         @if ($pengajuansuratketeranganaktif->surat_keteranganaktif)
                                             <a href="" target="popup"
-                                                onclick="window.open('{{ url($pengajuansuratketeranganaktif->surat_keteranganaktif) }}','popup','width=800,height=600'); return false;"
+                                                onclick="window.open('{{ url("public/$pengajuansuratketeranganaktif->surat_keteranganaktif") }}','popup','width=800,height=600'); return false;"
                                                 class="btn btn-secondary float-right btn-sm"><i
                                                     class="fas fa-download"></i> Lihat Surat</a>
                                         @endif
